@@ -1,0 +1,73 @@
+// ===================================
+// VARIABLES & THEME
+// ===================================
+
+// Colors - The MD Shuttles Brand Palette
+$color-bg: #fdfcf9; // Soft, creamy white
+$color-text: #1a1a1a; // Dark navy/black for high contrast
+$color-primary: #8C1C13; // Deep, elegant burgundy red
+$color-primary-dark: #6a140d;
+$color-grey: #e9e9e9;
+$color-white: #ffffff;
+
+// Fonts
+$font-primary: 'Inter', sans-serif; // Clean, modern font for body text
+$font-secondary: 'Playfair Display', serif; // Elegant, premium font for headings
+
+// Layout
+$container-width: 1200px;
+$border-radius: 8px;
+$box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+// ===================================
+// BASE RESETS & SETUP
+// ===================================
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-bg;
+  color: $color-text;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  // This ensures the main content doesn't crash into the sticky navbar
+  padding-top: 80px; 
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  line-height: 1.2;
+}

@@ -1,0 +1,64 @@
+// Self-contained variables for this component
+$color-primary: #8C1C13;
+$color-text: #1a1a1a;
+$color-bg: #fdfcf9;
+$color-white: #ffffff;
+$border-radius: 8px;
+
+.card {
+  background: $color-white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 65%;
+}
+
+.content {
+  padding: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $color-text;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: $color-primary;
+  margin-bottom: 1.5rem;
+}
+
+.bookButton {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 0.8rem 1.5rem;
+  border-radius: $border-radius;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: darken($color-primary, 5%);
+  }
+}

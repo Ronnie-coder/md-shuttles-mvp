@@ -1,0 +1,63 @@
+.hero {
+  position: relative;
+  height: calc(100vh - 80px); // Full viewport height minus the navbar height
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  // IMPORTANT: Add a background image named 'hero-bg.jpg' to your /public folder
+  background: url('/hero-bg.jpg') no-repeat center center/cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55); // Slightly darker for better text pop
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.content h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.content p {
+  font-size: 1.25rem;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.ctaButton {
+  background-color: #8C1C13;
+  color: #ffffff;
+  padding: 1rem 2.5rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border: 2px solid transparent;
+
+  &:hover {
+    background-color: #6a140d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+}

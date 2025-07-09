@@ -1,0 +1,67 @@
+// Self-contained variables for this component
+$color-primary: #8C1C13;
+$color-text: #1a1a1a;
+$color-bg: #fdfcf9;
+$font-secondary: 'Playfair Display', serif;
+$container-width: 1100px;
+$border-radius: 8px;
+
+.section {
+  padding: 6rem 2rem;
+  background-color: lighten($color-bg, 1%);
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.textColumn {
+  .heading {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .subheading {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: lighten($color-text, 40%);
+  }
+}
+
+.listColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pointItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.icon {
+  // This styles the SVG checkmark
+  color: $color-primary;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0; // Prevents the icon from shrinking
+}
+
+// Responsive adjustments for smaller screens
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .textColumn {
+    text-align: center;
+  }
+}

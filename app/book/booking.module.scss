@@ -1,0 +1,127 @@
+// Self-contained variables for this page
+$color-primary: #8C1C13;
+$color-text: #1a1a1a;
+$color-bg: #fdfcf9;
+$color-white: #ffffff;
+$color-grey: #e9e9e9;
+$border-radius: 8px;
+
+.bookingPage {
+  background-color: lighten($color-bg, 2%);
+  min-height: 100vh;
+}
+
+.centerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.header {
+  text-align: center;
+  padding: 4rem 2rem 2rem;
+  
+  h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+  p { font-size: 1.2rem; color: lighten($color-text, 40%); max-width: 600px; margin: 0 auto; }
+}
+
+.formContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bookingForm {
+  background: $color-white;
+  padding: 3rem;
+  border-radius: $border-radius;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+
+  legend {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-primary;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid $color-grey;
+  }
+}
+
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  
+  label { margin-bottom: 0.5rem; font-weight: 500; }
+  
+  input, select {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid $color-grey;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: $color-white;
+    transition: border-color 0.2s, box-shadow 0.2s;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+      box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+    }
+  }
+}
+
+.submitButton {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: darken($color-primary, 5%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba($color-primary, 0.3);
+  }
+}
+
+.successMessage {
+  background-color: $color-white;
+  padding: 4rem;
+  border-radius: $border-radius;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+
+  svg { color: #28a745; margin-bottom: 1.5rem; } // Green for success
+  h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+  p { color: lighten($color-text, 40%); margin-bottom: 2rem; line-height: 1.6; }
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .bookingForm {
+    padding: 2rem;
+  }
+}

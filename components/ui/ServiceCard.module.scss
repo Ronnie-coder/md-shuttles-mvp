@@ -1,0 +1,59 @@
+// Self-contained variables for this component ONLY
+$color-white: #ffffff;
+$color-text: #1a1a1a;
+$color-primary: #8C1C13;
+$border-radius: 8px;
+$box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+$font-secondary: 'Playfair Display', serif;
+
+.card {
+  background-color: $color-white;
+  border-radius: $border-radius;
+  overflow: hidden;
+  box-shadow: $box-shadow;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 60%; // Aspect ratio for the image
+}
+
+.content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  
+  h3 {
+    font-family: $font-secondary;
+    font-size: 1.5rem;
+    color: $color-text;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: lighten($color-text, 40%);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+}
+
+.learnMore {
+  color: $color-primary;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  
+  span {
+    transition: transform 0.2s ease;
+    display: inline-block;
+  }
+
+  &:hover span {
+    transform: translateX(5px);
+  }
+}

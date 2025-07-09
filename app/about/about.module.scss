@@ -1,0 +1,115 @@
+// Self-contained variables for this page
+$color-primary: #8C1C13;
+$color-text: #1a1a1a;
+$color-bg: #fdfcf9;
+$color-white: #ffffff;
+$font-secondary: 'Playfair Display', serif;
+$container-width: 1100px;
+$border-radius: 8px;
+
+/* SECTION 1: HEADER */
+.header {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: $color-white;
+    background: url('/images/about-header.jpg') no-repeat center center/cover;
+}
+.headerOverlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4));
+}
+.headerContent {
+    position: relative;
+    z-index: 2;
+    h1 { font-size: 3.5rem; }
+    p { font-size: 1.2rem; opacity: 0.9; }
+}
+
+/* SECTION 2: WHO WE ARE (INTRO) */
+.introSection {
+    padding: 6rem 2rem;
+    background: $color-white;
+}
+.introContainer {
+    max-width: $container-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+.introText {
+    h2 { font-size: 2.8rem; margin-bottom: 1.5rem; }
+    p { line-height: 1.8; margin-bottom: 1rem; color: lighten($color-text, 30%); }
+}
+.introImage {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: $border-radius;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* SECTION 3: MISSION & VISION */
+.missionVisionSection {
+    padding: 6rem 2rem;
+    background: $color-bg;
+}
+.missionVisionContainer {
+    max-width: $container-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+.mission, .vision {
+    h3 { font-size: 2rem; margin-bottom: 1rem; color: $color-primary; }
+    p { line-height: 1.7; }
+}
+
+/* SECTION 4: CORE VALUES */
+.valuesSection {
+    padding: 6rem 2rem;
+    background: $color-white;
+    text-align: center;
+    h2 { font-size: 2.8rem; margin-bottom: 4rem; }
+}
+.valuesGrid {
+    max-width: $container-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+.valueCard {
+    text-align: center;
+    padding: 2rem;
+    h4 { font-size: 1.5rem; margin: 1rem 0 0.5rem 0; }
+    p { color: lighten($color-text, 40%); }
+}
+.valueIcon {
+    color: $color-primary;
+    display: inline-block;
+}
+
+
+/* RESPONSIVE STYLES */
+@media (max-width: 900px) {
+    .introContainer {
+        grid-template-columns: 1fr;
+    }
+    .introImage {
+        order: -1; // Image goes on top on mobile
+        height: 300px;
+    }
+    .missionVisionContainer {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

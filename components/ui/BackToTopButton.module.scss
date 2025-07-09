@@ -1,0 +1,32 @@
+// Self-contained variables for this component
+$color-primary: #8C1C13;
+$color-white: #ffffff;
+
+.backToTopButton {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+  background-color: $color-primary;
+  color: $color-white;
+  
+  border: none;
+  cursor: pointer;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s, transform 0.2s;
+
+  &:hover {
+    background-color: darken($color-primary, 5%);
+    transform: translateY(-3px);
+  }
+}
