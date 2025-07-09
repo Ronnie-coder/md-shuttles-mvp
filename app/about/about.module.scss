@@ -1,6 +1,5 @@
 @use 'sass:color';
 
-// Self-contained variables for this page
 $color-primary: #8C1C13;
 $color-text: #1a1a1a;
 $color-bg: #fdfcf9;
@@ -9,7 +8,6 @@ $font-secondary: 'Playfair Display', serif;
 $container-width: 1100px;
 $border-radius: 8px;
 
-/* SECTION 1: HEADER */
 .header {
     position: relative;
     height: 50vh;
@@ -31,8 +29,6 @@ $border-radius: 8px;
     h1 { font-size: 3.5rem; }
     p { font-size: 1.2rem; opacity: 0.9; }
 }
-
-/* SECTION 2: WHO WE ARE (INTRO) */
 .introSection {
     padding: 6rem 2rem;
     background: $color-white;
@@ -57,8 +53,6 @@ $border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-
-/* SECTION 3: MISSION & VISION */
 .missionVisionSection {
     padding: 6rem 2rem;
     background: $color-bg;
@@ -74,8 +68,6 @@ $border-radius: 8px;
     h3 { font-size: 2rem; margin-bottom: 1rem; color: $color-primary; }
     p { line-height: 1.7; }
 }
-
-/* SECTION 4: CORE VALUES */
 .valuesSection {
     padding: 6rem 2rem;
     background: $color-white;
@@ -100,13 +92,12 @@ $border-radius: 8px;
     display: inline-block;
 }
 
-/* RESPONSIVE STYLES */
 @media (max-width: 900px) {
     .introContainer {
         grid-template-columns: 1fr;
     }
     .introImage {
-        order: -1; // Image goes on top on mobile
+        order: -1;
         height: 300px;
     }
     .missionVisionContainer {

@@ -5,11 +5,9 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { allPackages } from '@/data/packages';
-import styles from './booking.module.scss'; // <--- THIS IS THE FIX. This line was missing.
+import styles from './booking.module.scss';
 
-// SVG Icon for the success message
 const CheckCircleIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>;
-
 
 const BookingPageContent = () => {
   const [formData, setFormData] = useState({
@@ -40,7 +38,6 @@ const BookingPageContent = () => {
     setIsSubmitted(true);
   };
 
-  // The Success Message Component
   if (isSubmitted) {
     return (
       <div className={`${styles.bookingPage} ${styles.centerContent}`}>
@@ -61,7 +58,6 @@ const BookingPageContent = () => {
     );
   }
 
-  // The Booking Form Component
   return (
     <div className={styles.bookingPage}>
       <header className={styles.header}>
@@ -77,7 +73,6 @@ const BookingPageContent = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Service Details */}
           <fieldset className={styles.fieldset}>
             <legend>1. Service Details</legend>
             <div className={styles.formGrid}>
@@ -107,8 +102,6 @@ const BookingPageContent = () => {
               </div>
             </div>
           </fieldset>
-
-          {/* Location & Time */}
           <fieldset className={styles.fieldset}>
             <legend>2. Location & Time</legend>
             <div className={styles.formGrid}>
@@ -130,8 +123,6 @@ const BookingPageContent = () => {
               </div>
             </div>
           </fieldset>
-
-          {/* Personal Information */}
           <fieldset className={styles.fieldset}>
             <legend>3. Personal Information</legend>
             <div className={styles.formGrid}>
@@ -149,7 +140,6 @@ const BookingPageContent = () => {
               </div>
             </div>
           </fieldset>
-          
           <button type="submit" className={styles.submitButton}>Request Booking</button>
         </motion.form>
       </div>
