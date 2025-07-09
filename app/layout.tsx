@@ -17,8 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      {/* THE FINAL FIX IS HERE - This tells React to ignore browser extension issues */}
-      <body suppressHydrationWarning={true}>
+      {/* 
+        The suppressHydrationWarning is kept as you had it.
+        The inline style is added to account for the 80px fixed navbar height.
+      */}
+      <body suppressHydrationWarning={true} style={{ paddingTop: '80px' }}>
         <Navbar />
         <main>{children}</main>
         <Footer />

@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Self-contained variables for this component ONLY
 $color-bg: #fdfcf9;
 $container-width: 1200px;
@@ -5,7 +7,7 @@ $color-text: #1a1a1a;
 
 .servicesSection {
   padding: 6rem 2rem;
-  background-color: lighten($color-bg, 1%);
+  background-color: color.adjust($color-bg, $lightness: 1%);
 }
 
 .container {

@@ -1,32 +1,25 @@
-// Self-contained variables for this component
-$color-primary: #8C1C13;
-$color-white: #ffffff;
+@use 'sass:color';
+
+$color-primary: #8C1C13; // Assuming this variable might be here
 
 .backToTopButton {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 999;
-  
+  bottom: 20px;
+  right: 20px;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  
   background-color: $color-primary;
-  color: $color-white;
-  
+  color: white;
   border: none;
-  cursor: pointer;
-  
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  
+  cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.2s, transform 0.2s;
+  z-index: 1000;
 
   &:hover {
-    background-color: darken($color-primary, 5%);
-    transform: translateY(-3px);
+    background-color: color.adjust($color-primary, $lightness: -5%);
   }
 }

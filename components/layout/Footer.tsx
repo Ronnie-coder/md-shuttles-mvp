@@ -1,3 +1,4 @@
+// components/layout/Footer.tsx
 import Link from 'next/link';
 import styles from './Footer.module.scss';
 
@@ -7,14 +8,14 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.about}>
           <h3 className={styles.logo}>MD Shuttles</h3>
-          <p>"Safe, Reliable, and Efficient Transportation and Delivery Solutions"</p>
+          <p>&quot;Safe, Reliable, and Efficient Transportation and Delivery Solutions&quot;</p>
         </div>
         <div className={styles.links}>
           <h4>Quick Links</h4>
           <ul>
             <li><Link href="/about">About Us</Link></li>
             <li><Link href="/services">Services</Link></li>
-            <li><Link href="/tours">Tours</Link></li>
+            <li><Link href="/packages">Packages</Link></li>
             <li><Link href="/book">Book Now</Link></li>
           </ul>
         </div>

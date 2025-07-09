@@ -1,3 +1,4 @@
+// components/home/CallToAction.tsx
 'use client';
 
 import { motion } from 'framer-motion';
@@ -36,7 +37,7 @@ const CallToAction = () => {
       <div className={styles.overlay}></div>
       <div className={styles.content}>
         <motion.h2 variants={itemVariants}>
-          Let's Get Your Journey Started
+          Let&apos;s Get Your Journey Started
         </motion.h2>
         <motion.p variants={itemVariants}>
           Contact us for a custom quote or book your ride instantly. Our team is available 24/7 to ensure a seamless experience.

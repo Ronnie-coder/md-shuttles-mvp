@@ -1,20 +1,17 @@
 // app/about/AboutPageContent.tsx
-'use client'; // This directive BELONGS here now.
+'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from './about.module.scss';
 
-// All the SVG Icons and the component logic remains here...
+
 const ShieldIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>;
 const ClockIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>;
 const ZapIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>;
 const UsersIcon = () => <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>;
 
-// RENAMED FUNCTION
 const AboutPageContent = () => {
-
   const values = [
     { icon: <ShieldIcon />, title: "Safety", description: "The paramount principle in all our operations." },
     { icon: <ClockIcon />, title: "Reliability", description: "On-time, every time. You can count on us." },
@@ -24,7 +21,6 @@ const AboutPageContent = () => {
 
   return (
     <div className={styles.aboutPage}>
-      {/* All the JSX from before stays here... */}
        <header className={styles.header}>
         <div className={styles.headerOverlay}></div>
         <div className={styles.headerContent}>
@@ -72,4 +68,4 @@ const AboutPageContent = () => {
   );
 };
 
-export default AboutPageContent; // Export the new component name
+export default AboutPageContent;

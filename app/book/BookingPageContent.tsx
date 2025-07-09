@@ -66,7 +66,7 @@ const BookingPageContent = () => {
     <div className={styles.bookingPage}>
       <header className={styles.header}>
         <h1>Reserve Your Ride</h1>
-        <p>Complete the form below to request your transportation. It's fast, easy, and secure.</p>
+       <p>Complete the form below to request your transportation. It&apos;s fast, easy, and secure.</p>
       </header>
 
       <div className={styles.formContainer}>

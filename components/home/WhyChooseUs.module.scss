@@ -1,14 +1,14 @@
+@use 'sass:color';
+
 // Self-contained variables for this component
 $color-primary: #8C1C13;
 $color-text: #1a1a1a;
 $color-bg: #fdfcf9;
-$font-secondary: 'Playfair Display', serif;
 $container-width: 1100px;
-$border-radius: 8px;
 
 .section {
   padding: 6rem 2rem;
-  background-color: lighten($color-bg, 1%);
+  background-color: color.adjust($color-bg, $lightness: 1%);
 }
 
 .container {
@@ -29,7 +29,7 @@ $border-radius: 8px;
   .subheading {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: lighten($color-text, 40%);
+    color: color.adjust($color-text, $lightness: 40%);
   }
 }
 
@@ -48,14 +48,12 @@ $border-radius: 8px;
 }
 
 .icon {
-  // This styles the SVG checkmark
   color: $color-primary;
   width: 28px;
   height: 28px;
-  flex-shrink: 0; // Prevents the icon from shrinking
+  flex-shrink: 0;
 }
 
-// Responsive adjustments for smaller screens
 @media (max-width: 900px) {
   .container {
     grid-template-columns: 1fr;

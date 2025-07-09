@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Self-contained variables for this component
 $color-primary: #8C1C13;
 $color-text: #1a1a1a;
@@ -13,7 +15,7 @@ $border-radius: 8px;
 .header {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: darken($color-bg, 2%);
+  background-color: color.adjust($color-bg, $lightness: -2%);
   border-bottom: 1px solid #e9e9e9;
 
   h1 {
@@ -24,7 +26,7 @@ $border-radius: 8px;
 
   p {
     font-size: 1.2rem;
-    color: lighten($color-text, 40%);
+    color: color.adjust($color-text, $lightness: 40%);
     max-width: 500px;
     margin: 0 auto;
   }
@@ -58,6 +60,6 @@ $border-radius: 8px;
   p {
     font-size: 1rem;
     line-height: 1.7;
-    color: lighten($color-text, 30%);
+    color: color.adjust($color-text, $lightness: 30%);
   }
 }

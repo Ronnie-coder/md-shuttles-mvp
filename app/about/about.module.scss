@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Self-contained variables for this page
 $color-primary: #8C1C13;
 $color-text: #1a1a1a;
@@ -45,7 +47,7 @@ $border-radius: 8px;
 }
 .introText {
     h2 { font-size: 2.8rem; margin-bottom: 1.5rem; }
-    p { line-height: 1.8; margin-bottom: 1rem; color: lighten($color-text, 30%); }
+    p { line-height: 1.8; margin-bottom: 1rem; color: color.adjust($color-text, $lightness: 30%); }
 }
 .introImage {
     position: relative;
@@ -91,13 +93,12 @@ $border-radius: 8px;
     text-align: center;
     padding: 2rem;
     h4 { font-size: 1.5rem; margin: 1rem 0 0.5rem 0; }
-    p { color: lighten($color-text, 40%); }
+    p { color: color.adjust($color-text, $lightness: 40%); }
 }
 .valueIcon {
     color: $color-primary;
     display: inline-block;
 }
-
 
 /* RESPONSIVE STYLES */
 @media (max-width: 900px) {

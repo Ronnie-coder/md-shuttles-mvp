@@ -1,13 +1,13 @@
+@use 'sass:color';
+
 // Self-contained variables for this component
 $color-primary: #8C1C13;
 $color-text: #1a1a1a;
-$color-bg: #fdfcf9;
-$font-secondary: 'Playfair Display', serif;
 $container-width: 900px;
 
 .testimonialSection {
   padding: 6rem 2rem;
-  background-color: #ffffff; // A clean white background to separate it
+  background-color: #ffffff;
 }
 
 .container {
@@ -24,7 +24,7 @@ $container-width: 900px;
 
 .sliderContainer {
   position: relative;
-  min-height: 250px; // Prevents layout shift during transition
+  min-height: 250px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,7 +38,7 @@ $container-width: 900px;
     font-size: 1.5rem;
     font-style: italic;
     line-height: 1.6;
-    color: lighten($color-text, 20%);
+    color: color.adjust($color-text, $lightness: 20%);
     max-width: 750px;
     margin: 0 auto;
     border: none;
