@@ -1,10 +1,9 @@
-// components/Navbar/Navbar.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variants } from 'framer-motion'; // FIX 1: Imported Variants type
 import styles from './Navbar.module.scss';
 
 // --- SVG Icons for the menu buttons ---
@@ -37,7 +36,7 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
-  const menuVariants = {
+  const menuVariants: Variants = { // FIX 2: Explicitly typed the constant
     hidden: { opacity: 0, scale: 0.95 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.2, ease: 'easeOut' } },
     exit: { opacity: 0, scale: 0.95, transition: { duration: 0.15, ease: 'easeIn' } },
