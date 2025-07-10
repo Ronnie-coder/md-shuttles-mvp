@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // FIX 1: Imported Variants type
 import styles from './ServiceCard.module.scss';
 
 type ServiceCardProps = {
@@ -12,7 +12,7 @@ type ServiceCardProps = {
   linkUrl:string;
 };
 
-const cardVariants = {
+const cardVariants: Variants = { // FIX 2: Explicitly typed the constant
   hidden: { y: 50, opacity: 0 },
   visible: { 
     y: 0, 
