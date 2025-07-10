@@ -1,11 +1,11 @@
 'use client'; 
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // FIX 1: Imported Variants type
 import Link from 'next/link';
 import styles from './HeroSection.module.scss';
 
 const HeroSection = () => {
-  const containerVariants = {
+  const containerVariants: Variants = { // FIX 2: Explicitly typed the constant
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -16,7 +16,7 @@ const HeroSection = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = { // FIX 3: Explicitly typed the constant
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
