@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // FIX 1: Imported Variants type
 import { whyChooseUsPoints } from '@/data/whyChooseUs';
 import styles from './WhyChooseUs.module.scss';
 
@@ -24,7 +24,7 @@ const CheckIcon = () => (
 );
 
 const WhyChooseUs = () => {
-  const containerVariants = {
+  const containerVariants: Variants = { // FIX 2: Explicitly typed the constant
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = { // FIX 3: Explicitly typed the constant
     hidden: { opacity: 0, x: -20 },
     visible: {
       opacity: 1,
