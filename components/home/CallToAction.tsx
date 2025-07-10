@@ -1,12 +1,11 @@
-// components/home/CallToAction.tsx
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion'; // FIX 1: Imported Variants type
 import Link from 'next/link';
 import styles from './CallToAction.module.scss';
 
 const CallToAction = () => {
-  const containerVariants = {
+  const containerVariants: Variants = { // Also typed this for consistency
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -17,7 +16,7 @@ const CallToAction = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = { // FIX 2: Explicitly typed the constant
     hidden: { y: 20, opacity: 0 },
     visible: {
       y: 0,
